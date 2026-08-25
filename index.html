@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Custom laser cutting, CNC routing, engraving, signage and decor in Mississauga." />
+    <title>ANP Cutting | Custom Laser Cutting, CNC & Engraving</title>
+    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="hero-overrides.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ANP Cutting home"><img src="public/assets/anp-logo-flat.png" alt="ANP Cutting" /></a>
+      <nav aria-label="Main navigation"><a href="#projects">Explore work</a><a href="#services">Services</a><a href="#process">How it works</a><a href="#about">About</a></nav>
+      <a class="header-cta" href="#quote">Request a Quote</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <img class="hero-image" src="public/assets/projects/hero-wood-lattice.png" alt="Custom walnut lattice and layered wood sign detail" />
+        <div class="hero-copy">
+          <p class="eyebrow">Custom cutting & engraving in Mississauga</p>
+          <h1>What would you like to create?</h1>
+          <p class="hero-text">From a rough idea to a precision-made piece, ANP Cutting creates custom signs, decor, event details and fabrication projects.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#quote">Request a Quote</a><a class="text-link" href="#projects">Explore Our Work <span aria-hidden="true">→</span></a></div>
+        </div>
+      </section>
+
+      <section class="project-picker" id="projects" aria-labelledby="picker-title">
+        <div class="section-intro"><p class="eyebrow">Start with your goal</p><h2 id="picker-title">Choose the path that fits your project.</h2></div>
+        <div class="project-grid">
+          <a class="project-card" href="#quote"><img src="public/assets/projects/business-sign.png" alt="Layered business sign made from walnut and acrylic" /><span><strong>Business Signs</strong><small>Wall signs, office branding & displays</small></span></a>
+          <a class="project-card" href="#quote"><img src="public/assets/projects/custom-cutting.png" alt="Precision laser cutting in progress" /><span><strong>Custom Cutting & Engraving</strong><small>Precision-made for your idea</small></span></a>
+          <a class="project-card" href="#quote"><img src="public/assets/projects/wedding-acrylic.png" alt="Clear acrylic wedding sign with walnut details" /><span><strong>Weddings & Events</strong><small>Details that make an occasion yours</small></span></a>
+          <a class="project-card" href="#quote"><img src="public/assets/projects/home-decor.png" alt="Layered walnut wall decor" /><span><strong>Home Decor</strong><small>Warm, personal pieces for everyday spaces</small></span></a>
+          <a class="project-card" href="#quote"><img src="public/assets/projects/file-ready.png" alt="Prepared vector file and precision cut parts" /><span><strong>I Have a File Ready</strong><small>Send your artwork and get started</small></span></a>
+        </div>
+      </section>
+
+      <aside class="quote-strip"><p>Not sure which service you need?</p><a class="button button-dark" href="#quote">Request a Quote</a></aside>
+
+      <section class="services" id="services"><div><p class="eyebrow">Built for ideas of every scale</p><h2>Precision services.<br />Personal guidance.</h2></div><div class="service-list"><article><b>01</b><h3>Laser Cutting & Engraving</h3><p>Ideal for precise details, sharp corners, custom engraving and smaller cut pieces.</p></article><article><b>02</b><h3>CNC Routing</h3><p>Built for larger panels, thicker material, wall decor, signage and architectural work.</p></article><article><b>03</b><h3>Signs & Custom Pieces</h3><p>Acrylic, mirror acrylic, wood and layered material work, made to suit your space.</p></article></div></section>
+
+      <section class="materials"><p class="eyebrow">Materials we work with</p><div><span>Wood</span><span>Acrylic</span><span>PVC</span><span>Alupanel</span></div></section>
+
+      <section class="process" id="process"><div class="section-intro"><p class="eyebrow">Clear from start to finish</p><h2>Your idea, precision-made.</h2></div><ol><li><b>1</b><h3>Share your idea</h3><p>Send a file, sketch, image or short description.</p></li><li><b>2</b><h3>Design & quote</h3><p>We help refine the details and prepare a quote.</p></li><li><b>3</b><h3>We make it</h3><p>Your piece is cut, engraved and finished with care.</p></li><li><b>4</b><h3>Pick up or deliver</h3><p>We’ll let you know as soon as it is ready.</p></li></ol></section>
+
+      <section class="gallery" aria-label="Examples of custom work"><img src="public/assets/projects/portfolio-divider.png" alt="Custom walnut room divider" /><img src="public/assets/projects/portfolio-gifts.png" alt="Walnut keepsake boxes and laser-cut gift tags" /><img src="public/assets/projects/portfolio-acrylic.png" alt="Clear acrylic and walnut display plaque" /><img src="public/assets/projects/portfolio-address.png" alt="Layered black acrylic and walnut address sign" /></section>
+
+      <section class="about" id="about"><div><p class="eyebrow">Since 2016</p><h2>Custom work should feel easy to order.</h2></div><p>ANP Cutting began with a curiosity for laser and CNC cutting and grew into a practical, flexible custom fabrication business. Whether you know exactly what you need or only have an idea, we’ll help you find a way forward.</p></section>
+
+      <section class="quote" id="quote"><div><p class="eyebrow">Let’s make it</p><h2>Tell us about your project.</h2><p>Share your idea, approximate dimensions, material preference, deadline, and any reference photos.</p></div><form id="quote-form"><label>Name<input required name="name" placeholder="Your name" /></label><label>Email<input required type="email" name="email" placeholder="you@example.com" /></label><label>What are you looking to make?<textarea required name="project" rows="4" placeholder="A short description is perfect."></textarea></label><button class="button button-primary" type="submit">Send Quote Request</button><p class="form-note" id="form-note" role="status"></p></form></section>
+    </main>
+    <footer><img src="public/assets/anp-logo-flat.png" alt="ANP Cutting" /><p>Custom laser cutting, CNC routing & engraving in Mississauga, Ontario.</p><a href="#quote">Request a Quote</a></footer>
+    <script>document.getElementById('quote-form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-note').textContent='Thanks — your request is ready. We’ll connect this form to your preferred inbox before launch.';});</script>
+  </body>
+</html>

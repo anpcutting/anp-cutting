@@ -8,6 +8,9 @@
   const fileStatus = document.querySelector('#file-status');
   const referralSource = document.querySelector('[name="referral_source"]');
 
+  // Netlify serves the thank-you page from the clean directory URL.
+  if (form) form.action = '/thanks/';
+
   if (referralSource) {
     const options = [
       'Select an option',

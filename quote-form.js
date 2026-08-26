@@ -7,9 +7,14 @@
   const storedInputs = [...document.querySelectorAll('.stored-file')];
   const fileStatus = document.querySelector('#file-status');
   const referralSource = document.querySelector('[name="referral_source"]');
+  const submitButton = form?.querySelector('button[type="submit"]');
+  const formEndpoint = '/__forms.html';
 
   // Netlify serves the thank-you page from the clean directory URL.
-  if (form) form.action = '/thanks/';
+  if (form) {
+    form.action = '/thanks/';
+    form.setAttribute('netlify', '');
+  }
 
   if (referralSource) {
     const options = [
@@ -59,5 +64,28 @@
   fileDrop.addEventListener('dragleave', () => fileDrop.classList.remove('is-dragging'));
   fileDrop.addEventListener('drop', (event) => { event.preventDefault(); fileDrop.classList.remove('is-dragging'); setFiles(event.dataTransfer.files); });
   picker.addEventListener('change', () => setFiles(picker.files));
-  form.addEventListener('submit', () => { picker.disabled = true; });
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form.checkValidity()) return;
+
+    const formData = new FormData(form);
+    formData.set('form-name', form.name);
+    picker.disabled = true;
+    if (submitButton) submitButton.disabled = true;
+    if (fileStatus) fileStatus.textContent = 'Sending your request…';
+
+    try {
+      const response = await fetch(formEndpoint, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) throw new Error('Netlify did not accept the submission.');
+      window.location.assign('/thanks/');
+    } catch (error) {
+      picker.disabled = false;
+      if (submitButton) submitButton.disabled = false;
+      if (fileStatus) fileStatus.textContent = 'We could not send your request. Please try again or email info@anpcutting.com.';
+    }
+  });
 })();

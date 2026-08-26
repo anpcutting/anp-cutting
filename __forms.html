@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ANP Cutting form registration</title>
+  </head>
+  <body>
+    <!--
+      This static, hidden form lets Netlify register the quote form during every
+      deploy. Keep submitted field names in sync with index.html.
+    -->
+    <form name="quote-request" method="POST" data-netlify="true" netlify netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input type="hidden" name="form-name" value="quote-request">
+      <input type="hidden" name="subject" value="New ANP Cutting quote request">
+      <input name="bot-field">
+      <input name="name">
+      <input name="company">
+      <input name="phone">
+      <input name="email" type="email">
+      <select name="project_type"><option value=""></option></select>
+      <select name="material"><option value=""></option></select>
+      <textarea name="project_details"></textarea>
+      <select name="file_ready"><option value=""></option></select>
+      <select name="turnaround"><option value=""></option></select>
+      <select name="referral_source"><option value=""></option></select>
+      <input name="attachment_1" type="file">
+      <input name="attachment_2" type="file">
+      <input name="attachment_3" type="file">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+.quote-expanded { align-items: start; }
+.quote-help { color: var(--muted); font-size: 14px; line-height: 1.6; margin-top: 28px; max-width: 360px; }
+.quote-form { max-width: 700px; }
+.form-grid { display: grid; gap: 15px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.quote-form label { color: var(--muted); display: grid; font-size: 12px; gap: 7px; letter-spacing: .02em; }
+.quote-form label em { color: var(--wood); font-size: 10px; font-style: normal; }
+.quote-form input, .quote-form textarea, .quote-form select { background: #fff; border: 1px solid var(--line); border-radius: 0; color: var(--ink); font: inherit; padding: 13px; width: 100%; }
+.quote-form select { appearance: auto; }
+.choice-row { display: grid; gap: 15px; grid-template-columns: 1fr 1.3fr; }
+.choice-row fieldset { border: 1px solid var(--line); display: grid; gap: 10px; margin: 0; padding: 14px; }
+.choice-row legend { color: var(--muted); font-size: 12px; padding: 0 5px; }
+.choice-row fieldset label { align-items: center; display: flex; gap: 8px; }
+.choice-row input[type="radio"] { accent-color: var(--wood); margin: 0; padding: 0; width: auto; }
+.honeypot, .stored-file { height: 1px; left: -10000px; overflow: hidden; position: absolute; width: 1px; }
+.file-drop { align-items: center; background: rgba(255,255,255,.56); border: 1px dashed #bcae9d; cursor: pointer; display: grid; justify-items: center; min-height: 205px; padding: 28px 18px; text-align: center; transition: background .2s, border-color .2s; }
+.file-drop:hover, .file-drop.is-dragging { background: #fffaf2; border-color: var(--wood); }
+.file-drop input[type="file"] { height: 1px; left: -10000px; overflow: hidden; position: absolute; width: 1px; }
+.file-drop strong { font-family: Georgia, serif; font-size: 23px; font-weight: 400; }
+.file-drop span, .file-drop small { color: var(--muted); font-size: 12px; line-height: 1.5; }
+.file-drop small { margin-top: 8px; }
+.upload-icon { align-items: center; border: 1px solid #bcae9d; border-radius: 50%; color: var(--wood); display: flex; font-size: 24px; height: 44px; justify-content: center; margin-bottom: 10px; width: 44px; }
+@media (max-width: 620px) { .form-grid, .choice-row { grid-template-columns: 1fr; } }

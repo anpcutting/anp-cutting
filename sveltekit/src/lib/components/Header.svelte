@@ -1,0 +1,2 @@
+<script>let { active = '' } = $props();</script>
+<header class="site-header"><a class="brand" href="/" aria-label="ANP Cutting home"><img src="/assets/anp-logo-flat.png" alt="ANP Cutting" /></a><nav aria-label="Main navigation"><a class:is-current={active === 'products'} href="/products">Products</a><a href="/#projects">Explore work</a><a href="/#services">Services</a><a href="/#process">How it works</a><a href="/#about">About</a></nav><a class="header-cta" href="/#quote">Request a Quote</a></header>

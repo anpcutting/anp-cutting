@@ -1,0 +1,2 @@
+<script>import Header from '$lib/components/Header.svelte'; import Footer from '$lib/components/Footer.svelte';</script>
+<svelte:head><title>Thank you | ANP Cutting</title></svelte:head><Header /><main class="thanks-page"><p class="eyebrow">Request received</p><h1>Thank you for reaching out.</h1><p>We’ll review your project and get back to you as soon as possible.</p><a class="button button-primary" href="/">Back to ANP Cutting</a></main><Footer />

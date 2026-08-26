@@ -8,7 +8,21 @@
   const fileStatus = document.querySelector('#file-status');
   const referralSource = document.querySelector('[name="referral_source"]');
   const submitButton = form?.querySelector('button[type="submit"]');
-  const formEndpoint = '/__forms.html';
+  const formEndpoint = '/';
+  let submitStatus;
+
+  if (submitButton) {
+    submitStatus = document.createElement('p');
+    submitStatus.className = 'form-submit-status';
+    submitStatus.setAttribute('role', 'status');
+    submitButton.insertAdjacentElement('afterend', submitStatus);
+  }
+
+  const setSubmitStatus = (message, state = '') => {
+    if (!submitStatus) return;
+    submitStatus.textContent = message;
+    submitStatus.dataset.state = state;
+  };
 
   // Netlify serves the thank-you page from the clean directory URL.
   if (form) {
@@ -72,7 +86,7 @@
     formData.set('form-name', form.name);
     picker.disabled = true;
     if (submitButton) submitButton.disabled = true;
-    if (fileStatus) fileStatus.textContent = 'Sending your request…';
+    setSubmitStatus('Sending your request…');
 
     try {
       const response = await fetch(formEndpoint, {
@@ -85,7 +99,7 @@
     } catch (error) {
       picker.disabled = false;
       if (submitButton) submitButton.disabled = false;
-      if (fileStatus) fileStatus.textContent = 'We could not send your request. Please try again or email info@anpcutting.com.';
+      setSubmitStatus('We could not send your request. Please try again or email info@anpcutting.com.', 'error');
     }
   });
 })();

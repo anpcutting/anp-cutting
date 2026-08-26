@@ -6,6 +6,33 @@
   const picker = document.querySelector('#file-picker');
   const storedInputs = [...document.querySelectorAll('.stored-file')];
   const fileStatus = document.querySelector('#file-status');
+  const referralSource = document.querySelector('[name="referral_source"]');
+
+  if (referralSource) {
+    const options = [
+      'Select an option',
+      'Google Search',
+      'ChatGPT or another AI assistant',
+      'Facebook',
+      'Instagram',
+      'TikTok',
+      'LinkedIn',
+      'Pinterest',
+      'YouTube',
+      'Etsy, Amazon or another marketplace',
+      'Event planner, designer or contractor',
+      'Family or friend referral',
+      'Previous customer',
+      'Saw our work in person',
+      'Other'
+    ];
+    referralSource.replaceChildren(...options.map((label, index) => {
+      const option = new Option(label, index ? label : '');
+      option.disabled = index === 0;
+      option.selected = index === 0;
+      return option;
+    }));
+  }
 
   document.querySelectorAll('.project-card[data-project]').forEach((card) => {
     card.addEventListener('click', () => {

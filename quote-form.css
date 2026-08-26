@@ -19,6 +19,4 @@
 .file-drop span, .file-drop small { color: var(--muted); font-size: 12px; line-height: 1.5; }
 .file-drop small { margin-top: 8px; }
 .upload-icon { align-items: center; border: 1px solid #bcae9d; border-radius: 50%; color: var(--wood); display: flex; font-size: 24px; height: 44px; justify-content: center; margin-bottom: 10px; width: 44px; }
-.form-submit-status { color: var(--muted); font-size: 13px; line-height: 1.5; margin: 12px 0 0; }
-.form-submit-status[data-state="error"] { color: #983b2b; }
 @media (max-width: 620px) { .form-grid, .choice-row { grid-template-columns: 1fr; } }
